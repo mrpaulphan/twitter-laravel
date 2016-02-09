@@ -27,11 +27,9 @@ Route::get('/', function () {
 */
 
 Route::group(['middleware' => ['web']], function () {
-    //
+  Route::auth();
 });
 
-Route::group(['middleware' => 'web'], function () {
-    Route::auth();
-
-    Route::get('/home', 'HomeController@index');
+Route::group(['middleware' => ['web', 'auth']], function () {
+    Route::get('/', 'TimeLineController@index');
 });

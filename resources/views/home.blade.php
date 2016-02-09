@@ -2,15 +2,20 @@
 
 @section('content')
 <div class="container">
-    <div class="row">
-        <div class="col-md-10 col-md-offset-1">
-            <div class="panel panel-default">
-                <div class="panel-heading">Dashboard</div>
+    <div class="row" id="timeline">
+        <div class="col-md-4">
+          <form class="" action="#" method="post">
 
-                <div class="panel-body">
-                    You are logged in!
-                </div>
-            </div>
+          <div class="form-group">
+            <textarea class="form-control" rows="8" maxlength="140" placeholder="what are you up to" required></textarea>
+          </div>
+          <input type="submit" name="name" class="form-control" value="Post">
+
+        </form>
+                Post Status
+        </div>
+        <div class="col-md-8">
+                Timeline
         </div>
     </div>
 </div>
