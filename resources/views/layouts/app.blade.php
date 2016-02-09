@@ -23,6 +23,18 @@
         .fa-btn {
             margin-right: 6px;
         }
+
+        .expand-transition {
+            transition: all .3s ease;
+            height: auto;
+            overflow: hidden;
+        }
+
+        .expand-enter, .expand-leave {
+            height: 0;
+            padding: 0 20px;
+            opacity: 0;
+        }
     </style>
 </head>
 <body id="app-layout">
@@ -45,7 +57,6 @@
             </div>
 
             <div class="collapse navbar-collapse" id="app-navbar-collapse">
-
                 <!-- Right Side Of Navbar -->
                 <ul class="nav navbar-nav navbar-right">
                     <!-- Authentication Links -->
@@ -73,8 +84,8 @@
     <!-- JavaScripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.16/vue.js"></script>
-    <script src="{{asset('js/app.js')}}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.15/vue.js"></script>
+    <script src="{{ asset('js/app.js') }}"></script>
     {{-- <script src="{{ elixir('js/app.js') }}"></script> --}}
 </body>
 </html>
